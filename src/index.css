@@ -7,28 +7,8 @@ html {
   src: url(./assets/filt.woff2);
 }
 @font-face {
-  font-family: estile2;
-  src: url(./assets/InterTight-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: estile3;
-  src: url(./assets/FrontPageNeue.woff);
-}
-@font-face {
-  font-family: estile4;
-  src: url(./assets/newone.otf);
-}
-@font-face {
-  font-family: estile5;
-  src: url(./assets/newsecond.ttf);
-}
-@font-face {
-  font-family: estile6;
-  src: url(./assets/third.otf);
-}
-@font-face {
   font-family: estile7;
-  src: url(./assets/Geoform-Bold.otf);
+  src: url(./assets/file.woff2);
 }
 @font-face {
   font-family: estile8;
