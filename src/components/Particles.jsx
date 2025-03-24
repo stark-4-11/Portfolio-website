@@ -6,7 +6,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Logo from "./logo";
 import Page1con from "./page1con";
 import NavBar from "./NavBar";
-import MyImage from "../assets/shii.png";
+import MyImage from "../assets/myImg.png";
 
 const defaultColors = ["#ffffff", "#ffffff", "#ffffff"];
 

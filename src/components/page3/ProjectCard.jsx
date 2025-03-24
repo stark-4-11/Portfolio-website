@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { FaLink } from 'react-icons/fa';
-import ProjectImage from '../../assets/Screenshot (110).png';
+import ProjectImage from '../../assets/Screenshot (110).jpg';
 import "@google/model-viewer";
 
 function HomePage() {

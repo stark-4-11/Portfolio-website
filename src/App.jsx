@@ -111,7 +111,7 @@ pauseBetweenAnimations={1}
 
 
 
-<div className="flex justify-center items-center w-full mt-10  h-[1000px] sm:h-[100px] bg-black ">   
+<div className="flex justify-center items-center w-full mt-10  h-[100px] sm:h-[100px] bg-black ">   
       <div><Footer/></div>
     </div>
 
