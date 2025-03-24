@@ -1,0 +1,56 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: estile1;
+  src: url(./assets/filt.woff2);
+}
+@font-face {
+  font-family: estile2;
+  src: url(./assets/InterTight-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: estile3;
+  src: url(./assets/FrontPageNeue.woff);
+}
+@font-face {
+  font-family: estile4;
+  src: url(./assets/newone.otf);
+}
+@font-face {
+  font-family: estile5;
+  src: url(./assets/newsecond.ttf);
+}
+@font-face {
+  font-family: estile6;
+  src: url(./assets/third.otf);
+}
+@font-face {
+  font-family: estile7;
+  src: url(./assets/Geoform-Bold.otf);
+}
+@font-face {
+  font-family: estile8;
+  src: url(./assets/LEMONMILK-Bold.otf);
+}
+@font-face {
+  font-family: estile9;
+  src: url(./assets/file.woff2);
+}
+html{
+  background-color: rgb(255, 255, 255);
+}
+@keyframes shine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shine {
+  animation: shine 2s infinite linear;
+}
+
