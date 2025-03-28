@@ -53,9 +53,10 @@ function AnimatedText() {
           fontSize: "30rem",
           transformOrigin: "center", // Pivot from center
         }}
-      >
-        <div className="w-90 lg:w-120 xl:w-140 font-[estile1] text-[135px] md:text-[55px]  xl:text-[73px] text-white lg:text-[80px] sm:mt-2 md:mt-11 leading-none sm:w-150 sm:text-[70px] sm:font-[estile8]">
+      ><div className="w-[80vw]">
+        <div className=" lg:w-120 xl:w-140 font-[estile1] text-[8rem] md:text-[55px]  xl:text-[73px] text-white lg:text-[80px] sm:mt-2 md:mt-11 leading-none sm:w-150 sm:text-[70px] sm:font-[estile8]">
   Hello, <br /> I'm Lakshay!
+</div>
 </div>
 
       </motion.h1>

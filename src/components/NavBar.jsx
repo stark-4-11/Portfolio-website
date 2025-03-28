@@ -166,7 +166,7 @@ const NavBar = ({
         >
           <ul
             ref={navRef}
-            className="sm:flex gap-8 sm:gap-4 space-y-15 sm:space-y-0 list-none p-0 px-4 m-0 relative z-[3]"
+            className="md:flex gap-8  space-y-15 sm:space-y-10 md:space-y-0 list-none p-0 px-4 m-0 relative z-[3]"
             style={{
               color: "white",
               textShadow: "0 1px 1px hsl(205deg 30% 10% / 0.2)",

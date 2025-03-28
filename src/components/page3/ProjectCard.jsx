@@ -1,37 +1,8 @@
-import React, { useEffect, useRef } from 'react';
 import { FaLink } from 'react-icons/fa';
 import ProjectImage from '../../assets/Screenshot (110).jpg';
-import "@google/model-viewer";
 
 function HomePage() {
-  const modelViewerRef = useRef(null);
-
-  useEffect(() => {
-    const modelViewer = modelViewerRef.current;
-
-    if (!modelViewer) {
-      console.error('Model viewer element not found!');
-      return;
-    }
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const scrollHeight = window.innerHeight; // Use viewport height for faster rotation
-      const scrollProgress = scrollY / scrollHeight;
-
-      // Increase the rotation multiplier and add a smoothing factor
-      const rotationAngle = (520 * scrollProgress) % 360; // Continuous rotation
-
-      // Update the camera-orbit attribute
-      modelViewer.setAttribute('camera-orbit', `${rotationAngle}deg 60deg 125%`);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+ 
 
   return (
     <>
@@ -90,23 +61,6 @@ function HomePage() {
           </div>
         </div>
 
-        {/* 3D Model */}
-        <div className='absolute top-[50vh] left-[26vw] w-[80%] h-[500px] sm:w-[50vw] sm:top-[-18vh] sm:left-[30vw] md:left-[30vw] md:top-[-2vh] md:h-[30vh] lg:top-[35vh] lg:left-[38vw] lg:w-[35vw] lg:h-[55vh] xl:left-[34vw] xl:top-[55vh]' style={{ zIndex: 10 }}>
-          <model-viewer
-            ref={modelViewerRef}
-            src="/models/Robo.glb"
-            alt="A 3D Model"
-            scale="18 18 18"
-            camera-orbit="0deg 60deg 125%" // Adjusted vertical angle
-            autoplay="true"
-            style={{
-              width: "50%",
-              height: "100%",
-              objectFit: "contain",
-              transform: "translateY(10px)",
-            }}
-          ></model-viewer>
-        </div>
 
         {/* Second Card */}
         <div className='border-6 text-white rounded-4xl grid justify-center items-center w-[85vw] h-130 mt-2 sm:w-[40vw] sm:h-120 md:w-[40vw] lg:w-[30vw] xl:w-[25vw]'>

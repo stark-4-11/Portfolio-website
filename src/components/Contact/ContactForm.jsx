@@ -42,29 +42,29 @@ const Form = () => {
   };
 
   return (
-    <div className="sm:flex lg:space-x-40 xl:space-x-90 space-y-30 grid justify-center items-center">
-      <div className="w-full max-w-[90vw] p-6">
+    <div className="sm:flex  lg:space-x-40 xl:space-x-90 space-y-30 grid  justify-center items-center">
+      <div className=" grid justify-center items-center ">
         <h2 className="text-2xl font-bold text-white mb-4">Get in touch</h2>
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <input
             type="text"
-            name="from_name"
-            className="text-white border-0 rounded-md p-2 mb-4 focus:ring-0 focus:outline-none font-[estile9] border-y-2"
+            name="name"
+            className="text-white w-75 border-0 rounded-md p-3 mb-6 focus:ring-0 focus:outline-none font-[estile9] border-y-2"
             required
             placeholder="Full Name"
             disabled={isLoading || isSubmitted}
           />
           <input
             type="email"
-            name="from_email"
-            className="text-white border-0 rounded-md p-2 mb-4 focus:ring-0 focus:outline-none font-[estile9] border-y-2"
+            name="email"
+            className="text-white border-0 rounded-md  p-3 mb-6  focus:ring-0 focus:outline-none font-[estile9] border-y-2"
             required
             placeholder="Email"
             disabled={isLoading || isSubmitted}
           />
           <textarea
             name="message"
-            className="text-white border-0 rounded-md p-2 mb-4 focus:ring-0 focus:outline-none font-[estile9] border-y-2 resize-none h-25"
+            className="text-white border-0 rounded-md  p-3 mb-6  focus:ring-0 focus:outline-none font-[estile9] border-y-2 resize-none h-25"
             required
             placeholder="Message"
             defaultValue={""}

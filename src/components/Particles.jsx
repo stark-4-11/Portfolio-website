@@ -250,7 +250,7 @@ const Particles = ({
         {/* NavBar Toggle Button */}
         <div className="fixed top-3 right-3 p-2 z-50">
           <button
-            className="text-[30px] sm:hidden text-amber-50"
+            className="text-[30px] md:hidden text-amber-50"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
@@ -259,14 +259,13 @@ const Particles = ({
 
         {/* NavBar */}
         <div
-          className={`fixed bg-[rgba(0,0,0,0.6)] sm:w-130 md:w-130 lg:w-130 xl:w-135 xl:flex border-white border-2 p-10 font-[estile9] text-[20px] sm:text-[16px] sm:font-[estile9] 
-            ${isOpen ? "w-[350px] h-[70vh] mr-[4.5vw]" : "w-[1px] h-[1vh] mt-[-10px] mr-[-25vw]"} 
+          className={`fixed bg-[rgba(0,0,0,0.6)] sm:w-130 md:w-145 lg:w-150 xl:w-155 xl:flex border-white border-2 p-10 font-[estile9] text-[20px] sm:text-[16px] sm:font-[estile9] 
+            ${isOpen ? "w-[65vw] h-[570px] mr-[1vw] sm:mt-[-2vh] sm:w-[35vw] sm:h-[570px] sm:mr-[1vw]" : "w-[1vw] h-[1vh] mt-[-10px] mr-[-25vw] sm:w-[1vw] sm:h-[1vh] sm:mt-12 sm:mr-[-25vw]"} 
             transition-all duration-400 ease-in-out
             top-20 right-[2px] absolute
-            sm:w-48 sm:h-15 sm:left-30 sm:p-0 sm:mt-0.5 sm:border-none sm:border-0 
-            md:w-56 sm:top-5 md:h-15 md:left-60 md:block 
-            lg:w-80 lg:h-16 lg:left-80 lg:top-5 
-            xl:w-80 xl:h-15 xl:top- xl:left-110
+            md:w-56  md:h-15 md:left-50 md:block md:border-none md:border-0 md:p-0 md:mt-[-7vw]
+            lg:w-80 lg:h-16 lg:left-80 lg:top-25
+            xl:w-80 xl:h-15 xl:top-28 xl:left-110
             z-50`}
           style={{ borderRadius: "10px" }}
         >
