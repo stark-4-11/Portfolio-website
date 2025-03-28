@@ -10,7 +10,7 @@ import {
 
 const ContactInfo = () => {
   return (
-    <div className='flex justify-center mt-[-15vh] items-center '>
+    <div className='flex justify-center items-center '>
       <div className="w-full max-w-md mx-auto p-6">
         <div className="text-white space-y-10 flex w-70 flex-col items-center">
           {/* Contact Info */}
