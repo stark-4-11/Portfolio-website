@@ -328,16 +328,15 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
- { image: "/Posters/Alleviate poster design.jpg", text: "Alleviate" },
-  { image: "/Posters/Cinema Paradiso.jpg", text: "Cinema Paradiso" },
-  { image: "/Posters/Escape The Voices.jpg", text: "Escape The Voices" },
-  { image: "/Posters/Fclub.jpg", text: "Fight Club" },
-  { image: "/Posters/FIGHTCLUB.jpg", text: "Fight Club" },
-  { image: "/Posters/Get out.jpg", text: "Get Out" },
-  { image: "/Posters/nosferatu.png", text: "Nosferatu" },
-  { image: "/Posters/Oppenheimer.jpg", text: "Oppenheimer" },
-  { image: "/Posters/seven.jpg", text: "Se7en" },
-  { image: "/Posters/Taxi driver.jpg", text: "Taxi Driver" }
+ { image: "/public/Posters/Alleviate.jpg", text: "Alleviate" },
+  { image: "/public/Posters/Cinema-Paradiso.jpg", text: "Cinema Paradiso" },
+  { image: "/public/Posters/Escape-The-Voices.jpg", text: "Escape The Voices" },
+  { image: "/public/Posters/Fclub.jpg", text: "Fight Club" },
+  { image: "/public/Posters/FIGHTCLUB.jpg", text: "Fight Club" },
+  { image: "/public/Posters/Get-out.jpg", text: "Get Out" },
+  { image: "/public/Posters/nosferatu.png", text: "Nosferatu" },
+  { image: "/public/Posters/seven.jpg", text: "Oppenheimer" },
+  { image: "/public/Posters/Taxi-driver.jpg", text: "Se7en" },
     ]
     const galleryItems = items && items.length ? items : defaultItems
     this.mediasImages = galleryItems.concat(galleryItems)
