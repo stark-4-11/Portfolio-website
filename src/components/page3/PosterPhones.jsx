@@ -328,15 +328,15 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
- { image: "/public/Posters/Alleviate.jpg", text: "Alleviate" },
-  { image: "/public/Posters/Cinema-Paradiso.jpg", text: "Cinema Paradiso" },
-  { image: "/public/Posters/Escape-The-Voices.jpg", text: "Escape The Voices" },
-  { image: "/public/Posters/Fclub.jpg", text: "Fight Club" },
-  { image: "/public/Posters/FIGHTCLUB.jpg", text: "Fight Club" },
-  { image: "/public/Posters/Get-out.jpg", text: "Get Out" },
-  { image: "/public/Posters/nosferatu.png", text: "Nosferatu" },
-  { image: "/public/Posters/seven.jpg", text: "Oppenheimer" },
-  { image: "/public/Posters/Taxi-driver.jpg", text: "Se7en" },
+  { image: "/Posters/alleviate.jpg", text: "Alleviate" },
+  { image: "/Posters/cinema-paradiso.jpg", text: "Cinema Paradiso" },
+  { image: "/Posters/escape-voices.jpg", text: "Escape The Voices" },
+  { image: "/Posters/fight-club.jpg", text: "Fight Club" },
+  { image: "/Posters/get-out.jpg", text: "Get Out" },
+  { image: "/Posters/nosferatu.png", text: "Nosferatu" },
+  { image: "/Posters/oppenheimer.jpg", text: "Oppenheimer" },
+  { image: "/Posters/seven.jpg", text: "Se7en" },
+  { image: "/Posters/taxi-driver.jpg", text: "Taxi Driver" }
     ]
     const galleryItems = items && items.length ? items : defaultItems
     this.mediasImages = galleryItems.concat(galleryItems)
