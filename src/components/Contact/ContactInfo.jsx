@@ -10,11 +10,7 @@ import {
 
 const ContactInfo = () => {
   return (
-<<<<<<< HEAD
-    <div className='flex justify-center items-center '>
-=======
     <div className='flex justify-center sm:mt-[-15vh] items-center '>
->>>>>>> 67bb62b (Updated [describe changes])
       <div className="w-full max-w-md mx-auto p-6">
         <div className="text-white space-y-10 flex w-70 flex-col items-center">
           {/* Contact Info */}
