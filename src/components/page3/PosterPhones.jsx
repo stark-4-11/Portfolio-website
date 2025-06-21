@@ -328,16 +328,16 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `/src/assets/Posters/Alleviate poster design.jpg`, text: 'Bridge' },
-      { image: `/src/assets/Posters/Cinema Paradiso.jpg`, text: 'Desk Setup' },
-      { image: `/src/assets/Posters/Escape The Voices.jpg`, text: 'Waterfall' },
-      { image: `/src/assets/Posters/Fclub.jpg`, text: 'Strawberries' },
-      { image: `/src/assets/Posters/FIGHTCLUB.jpg`, text: 'Deep Diving' },
-      { image: `/src/assets/Posters/Get out.jpg`, text: 'Train Track' },
-      { image: `/src/assets/Posters/nosferatu.png`, text: 'Santorini' },
-      { image: `/src/assets/Posters/Oppenheimer.jpg`, text: 'Blurry Lights' },
-      { image: `/src/assets/Posters/seven.jpg`, text: 'New York' },
-      { image: `/src/assets/Posters/Taxi driver.jpg`, text: 'Good Boy' }
+      { image: `/src/assets/Posters/Alleviate poster design.jpg`, text: 'Alleviate' },
+{ image: `/src/assets/Posters/Cinema Paradiso.jpg`, text: 'Cinema Paradiso' },
+{ image: `/src/assets/Posters/Escape The Voices.jpg`, text: 'Escape The Voices' },
+{ image: `/src/assets/Posters/Fclub.jpg`, text: '**** ****' },
+{ image: `/src/assets/Posters/FIGHTCLUB.jpg`, text: '**** ****' },
+{ image: `/src/assets/Posters/Get out.jpg`, text: 'Get out' },
+{ image: `/src/assets/Posters/nosferatu.png`, text: 'nosferatu' },
+{ image: `/src/assets/Posters/Oppenheimer.jpg`, text: 'Oppenheimer' },
+{ image: `/src/assets/Posters/seven.jpg`, text: 'seven' },
+{ image: `/src/assets/Posters/Taxi driver.jpg`, text: 'Taxi driver' }
     ]
     const galleryItems = items && items.length ? items : defaultItems
     this.mediasImages = galleryItems.concat(galleryItems)
