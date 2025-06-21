@@ -328,15 +328,15 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-  { image: "/Posters/alleviate.jpg", text: "Alleviate" },
-  { image: "/Posters/cinema-paradiso.jpg", text: "Cinema Paradiso" },
-  { image: "/Posters/escape-voices.jpg", text: "Escape The Voices" },
-  { image: "/Posters/fight-club.jpg", text: "Fight Club" },
-  { image: "/Posters/get-out.jpg", text: "Get Out" },
-  { image: "/Posters/nosferatu.png", text: "Nosferatu" },
-  { image: "/Posters/oppenheimer.jpg", text: "Oppenheimer" },
-  { image: "/Posters/seven.jpg", text: "Se7en" },
-  { image: "/Posters/taxi-driver.jpg", text: "Taxi Driver" }
+  { image: "/alleviate.jpg", text: "Alleviate" },
+  { image: "/cinema-paradiso.jpg", text: "Cinema Paradiso" },
+  { image: "/escape-voices.jpg", text: "Escape The Voices" },
+  { image: "/fight-club.jpg", text: "Fight Club" },
+  { image: "/get-out.jpg", text: "Get Out" },
+  { image: "/nosferatu.png", text: "Nosferatu" },
+  { image: "/oppenheimer.jpg", text: "Oppenheimer" },
+  { image: "/seven.jpg", text: "Se7en" },
+  { image: "/taxi-driver.jpg", text: "Taxi Driver" }
     ]
     const galleryItems = items && items.length ? items : defaultItems
     this.mediasImages = galleryItems.concat(galleryItems)
