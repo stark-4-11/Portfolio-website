@@ -328,7 +328,7 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-{ image: `/Posters/Alleviate poster design.jpg`, text: 'Alleviate' },
+{ image: "/Posters/Alleviate poster design.jpg", text: 'Alleviate' },
   { image: `/Posters/Cinema Paradiso.jpg`, text: 'Cinema Paradiso' },
   { image: `/Posters/Escape The Voices.jpg`, text: 'Escape The Voices' },
   { image: `/Posters/Fclub.jpg`, text: 'Fight Club' },
