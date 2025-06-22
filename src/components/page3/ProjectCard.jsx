@@ -2,9 +2,6 @@ import React from "react";
 import RollingGallery from "./RollingGallery";
 import CircularGallery from './PosterPhones'
 import ProjectList from "./ProjectList"
-import screenshotImg from "../../assets/screenshot110.jpg";
-
-
 
 
 
