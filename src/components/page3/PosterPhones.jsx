@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import {
   Renderer,
   Camera,
@@ -181,7 +181,6 @@ class Media {
         uniform float uBorderRadius;
         varying vec2 vUv;
         
-        // Rounded box SDF for UV space
         float roundedBoxSDF(vec2 p, vec2 b, float r) {
           vec2 d = abs(p) - b;
           return length(max(d, vec2(0.0))) + min(max(d.x, d.y), 0.0) - r;
@@ -198,7 +197,6 @@ class Media {
           );
           vec4 color = texture2D(tMap, uv);
           
-          // Apply rounded corners (assumes vUv in [0,1])
           float d = roundedBoxSDF(vUv - 0.5, vec2(0.5 - uBorderRadius), uBorderRadius);
           if(d > 0.0) {
             discard;
@@ -239,7 +237,7 @@ class Media {
       renderer: this.renderer,
       text: this.text,
       textColor: this.textColor,
-      fontFamily: this.font
+      font: this.font
     })
   }
   update(scroll, direction) {
@@ -303,11 +301,19 @@ class Media {
 }
 
 class App {
-  constructor(container, { items, bend, textColor = "#ffffff", borderRadius = 0, font = "bold 30px DM Sans" } = {}) {
+  constructor(container, { 
+    items, 
+    bend, 
+    textColor = "#ffffff", 
+    borderRadius = 0, 
+    font = "bold 30px DM Sans",
+    onIndexChange = () => {}
+  } = {}) {
     document.documentElement.classList.remove('no-js')
     this.container = container
     this.scroll = { ease: 0.05, current: 0, target: 0, last: 0 }
     this.onCheckDebounce = debounce(this.onCheck, 200)
+    this.onIndexChange = onIndexChange
     this.createRenderer()
     this.createCamera()
     this.createScene()
@@ -339,16 +345,16 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-    { image: ImagOne, text: "Alleviate" },
-    { image: ImagTwo, text: "Cinema Paradiso" },
-    { image: ImagThree, text: "Escape The Voices" },
-    { image: ImagFour, text: "Fight Club" },
-    { image: ImagFive, text: "Fight Club (alt)" },
-    { image: ImagSix, text: "Get Out" },
-    { image: ImagSeven, text: "Nosferatu" },
-    { image: ImagEight, text: "Oppenheimer" },
-    { image: ImagNine, text: "Se7en" },
-    { image: ImagTen, text: "Taxi Driver" }
+      { image: ImagOne, text: "Alleviate" },
+      { image: ImagTwo, text: "Cinema Paradiso" },
+      { image: ImagThree, text: "Escape The Voices" },
+      { image: ImagFour, text: "Fight Club" },
+      { image: ImagFive, text: "Fight Club (alt)" },
+      { image: ImagSix, text: "Get Out" },
+      { image: ImagSeven, text: "Nosferatu" },
+      { image: ImagEight, text: "Oppenheimer" },
+      { image: ImagNine, text: "Se7en" },
+      { image: ImagTen, text: "Taxi Driver" }
     ]
     const galleryItems = items && items.length ? items : defaultItems
     this.mediasImages = galleryItems.concat(galleryItems)
@@ -396,6 +402,11 @@ class App {
     const itemIndex = Math.round(Math.abs(this.scroll.target) / width)
     const item = width * itemIndex
     this.scroll.target = this.scroll.target < 0 ? -item : item
+    
+    // Calculate the actual index (modulo the real item count)
+    const realItemCount = this.mediasImages.length / 2
+    const realIndex = itemIndex % realItemCount
+    this.onIndexChange(realIndex)
   }
   onResize() {
     this.screen = {
@@ -471,13 +482,58 @@ export default function CircularGallery({
   font = "bold 30px DM Sans"
 }) {
   const containerRef = useRef(null)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  
+  // Get the actual items (without duplicates)
+  const galleryItems = items && items.length ? items : [
+    { image: ImagOne, text: "Alleviate" },
+    { image: ImagTwo, text: "Cinema Paradiso" },
+    { image: ImagThree, text: "Escape The Voices" },
+    { image: ImagFour, text: "Fight Club" },
+    { image: ImagFive, text: "Fight Club (alt)" },
+    { image: ImagSix, text: "Get Out" },
+    { image: ImagSeven, text: "Nosferatu" },
+    { image: ImagEight, text: "Oppenheimer" },
+    { image: ImagNine, text: "Se7en" },
+    { image: ImagTen, text: "Taxi Driver" }
+  ]
+
   useEffect(() => {
-    const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font })
+    const app = new App(containerRef.current, { 
+      items, 
+      bend, 
+      textColor, 
+      borderRadius, 
+      font,
+      onIndexChange: (index) => {
+        setCurrentIndex(index)
+      }
+    })
+    
     return () => {
       app.destroy()
     }
   }, [items, bend, textColor, borderRadius, font])
+
   return (
-    <div className='w-full h-full overflow-hidden cursor-grab active:cursor-grabbing' ref={containerRef} />
+    <div className="relative w-full h-full overflow-hidden">
+      <div 
+        className="w-full h-full cursor-grab active:cursor-grabbing" 
+        ref={containerRef} 
+      />
+      
+      {/* Dots indicator - only show on mobile */}
+      <div className="md:hidden absolute bottom-6 left-0 right-0 flex justify-center items-center gap-3">
+        {galleryItems.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex ? 'bg-white scale-125' : 'bg-white/50'
+            }`}
+            aria-label={`Go to item ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
   )
 }
