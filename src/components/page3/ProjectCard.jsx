@@ -2,6 +2,9 @@ import React from "react";
 import RollingGallery from "./RollingGallery";
 import CircularGallery from './PosterPhones'
 import ProjectList from "./ProjectList"
+import screenshotImg from "../../assets/screenshot110.jpg";
+
+
 
 
 
@@ -60,7 +63,7 @@ const ProjectCard = () => {
                 >
                   <p className="font-[estile7] text-[10px]">Movie-Verse</p>
                   <img
-                    src="/src/assets/Posters/Screenshot (184).png"
+                    src={screenshotImg}
                     alt=""
                     className="w-full h-full object-cover rounded-[10px]"
                   />
