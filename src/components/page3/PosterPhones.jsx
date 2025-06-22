@@ -9,6 +9,17 @@ import {
   Texture,
 } from 'ogl'
 
+import ImagOne from "../../assets/Posters/alleviate.jpg"
+import ImagTwo from "../../assets/Posters/cinema-paradiso.jpg"
+import ImagThree from "../../assets/Posters/escape-the-voices.jpg"
+import ImagFour from "../../assets/Posters/fclub.jpg"
+import ImagFive from "../../assets/Posters/fightclub.jpg"
+import ImagSix from "../../assets/Posters/get-out.jpg"
+import ImagSeven from "../../assets/Posters/nosferatu.png"
+import ImagEight from "../../assets/Posters/oppenheimer.jpg"
+import ImagNine from "../../assets/Posters/seven.jpg"
+import ImagTen from "../../assets/Posters/taxi-driver.jpg"
+
 function debounce(func, wait) {
   let timeout
   return function (...args) {
@@ -328,15 +339,16 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-  { image: "/alleviate.jpg", text: "Alleviate" },
-  { image: "/cinema-paradiso.jpg", text: "Cinema Paradiso" },
-  { image: "/escape-voices.jpg", text: "Escape The Voices" },
-  { image: "/fight-club.jpg", text: "Fight Club" },
-  { image: "/get-out.jpg", text: "Get Out" },
-  { image: "/nosferatu.png", text: "Nosferatu" },
-  { image: "/oppenheimer.jpg", text: "Oppenheimer" },
-  { image: "/seven.jpg", text: "Se7en" },
-  { image: "/taxi-driver.jpg", text: "Taxi Driver" }
+    { image: ImagOne, text: "Alleviate" },
+    { image: ImagTwo, text: "Cinema Paradiso" },
+    { image: ImagThree, text: "Escape The Voices" },
+    { image: ImagFour, text: "Fight Club" },
+    { image: ImagFive, text: "Fight Club (alt)" },
+    { image: ImagSix, text: "Get Out" },
+    { image: ImagSeven, text: "Nosferatu" },
+    { image: ImagEight, text: "Oppenheimer" },
+    { image: ImagNine, text: "Se7en" },
+    { image: ImagTen, text: "Taxi Driver" }
     ]
     const galleryItems = items && items.length ? items : defaultItems
     this.mediasImages = galleryItems.concat(galleryItems)

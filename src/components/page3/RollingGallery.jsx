@@ -5,16 +5,16 @@ import {
   useAnimation,
   useTransform,
 } from "framer-motion";
-import ImagOne from "../../assets/Posters/Alleviate poster design.jpg";
-import ImagTwo from "../../assets/Posters/Cinema Paradiso.jpg";
-import ImagThree from "../../assets/Posters/Escape The Voices.jpg";
-import ImagFour from "../../assets/Posters/Fclub.jpg";
-import ImagFive from "../../assets/Posters/FIGHTCLUB.jpg";
-import ImagSix from "../../assets/Posters/Get out.jpg";
+import ImagOne from "../../assets/Posters/alleviate.jpg";
+import ImagTwo from "../../assets/Posters/cinema-paradiso.jpg";
+import ImagThree from "../../assets/Posters/escape-the-voices.jpg";
+import ImagFour from "../../assets/Posters/fclub.jpg";
+import ImagFive from "../../assets/Posters/fightclub.jpg";
+import ImagSix from "../../assets/Posters/get-out.jpg";
 import ImagSeven from "../../assets/Posters/nosferatu.png";
-import ImagEight from "../../assets/Posters/Oppenheimer.jpg";
+import ImagEight from "../../assets/Posters/oppenheimer.jpg";
 import ImagNine from "../../assets/Posters/seven.jpg";
-import ImagTen from "../../assets/Posters/Taxi driver.jpg";
+import ImagTen from "../../assets/Posters/taxi-driver.jpg";
 
 const IMGS = [
   ImagOne,
