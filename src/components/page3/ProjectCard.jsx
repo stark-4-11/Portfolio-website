@@ -63,7 +63,7 @@ const ProjectCard = () => {
                 >
                   <p className="font-[estile7] text-[10px]">Movie-Verse</p>
                   <img
-                    src={screenshotImg}
+                    src="/Screenshot110.jpg"
                     alt=""
                     className="w-full h-full object-cover rounded-[10px]"
                   />
